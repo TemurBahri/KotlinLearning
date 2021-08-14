@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
         //== eşittir
         //!= eşit değildir
         //&& ve işareti (and)
-        //|| boru işareti (or)(alt+soru işareti tuşu)
+        //|| veya işareti (or)(alt+çizgi tuşu)
         println(3<5)
         println(6<3)
         println(3==3)
@@ -90,5 +90,127 @@ class MainActivity : AppCompatActivity() {
         var input = "10"
         var inputInteger = input.toInt()
         println(inputInteger * 2)
+
+        println("---------------Collections)--------------")
+        //Collections
+        //Arrays
+
+        val myArray = arrayOf("Timur","Bahri","Nila")
+        //index
+        println(myArray[0])
+        myArray[0] ="Timur Bahri"
+        println(myArray[0])
+
+        myArray.set(1,"Bahri bahri")
+        println(myArray[1])
+
+        val numberArray = arrayOf(1,2,3,4,5)
+        println(numberArray[3])
+
+        val myNewArray = doubleArrayOf(1.2,1.3,1.6)
+        val mixedArray = arrayOf("Tim",5)
+        println( mixedArray[0])
+        println( mixedArray[1])
+
+        println("---------------List--------------")
+
+
+        val myMusician = arrayListOf<String>("Timur","bahri")
+        myMusician.add("Lars")
+        println(myMusician[2])
+        myMusician.add(0,"Rob")
+        println(myMusician[0])
+
+        val myArrayList = ArrayList<Int>()
+        myArrayList.add(1)
+        myArrayList.add(100)
+
+        val myMixedArrayList = ArrayList<Any>()
+        myMixedArrayList.add("Tim")
+        myMixedArrayList.add(22.2)
+        myMixedArrayList.add(true)
+
+        println(myMixedArrayList[0])
+        println(myMixedArrayList[1])
+        println(myMixedArrayList[2])
+
+
+        println("-------------- Set --------------")
+
+        val myExampleArray = arrayOf(1,2,3,4,5)
+        println("element 1: ${myExampleArray[0]}")
+        println("element 2: ${myExampleArray[1]}")
+
+        val mySet = setOf<Int>(1,1,2,3)
+        println(mySet.size)
+
+        //foreach
+
+        mySet.forEach { println(it) }
+
+        val myStringSet = HashSet<String>()
+        myStringSet.add("Timur")
+        myStringSet.add("Timur")
+        println(myStringSet.size)
+
+        println("-------------- Map --------------")
+
+        val fruitArray = arrayOf("Elma","Muz")
+        val caloriesArray = arrayOf(100,500)
+        println("${fruitArray[0]} : ${caloriesArray[0]}")
+
+        val fruitCaloriesMap = hashMapOf<String,Int>()
+        fruitCaloriesMap.put("Elma",100)
+        fruitCaloriesMap.put("Muz",500)
+        println(fruitCaloriesMap["Elma"])
+
+
+        val myHashMap = HashMap<String,String>()
+
+        val myNewMap = hashMapOf<String,Int>("a" to 1 ,"b" to 2,"c" to  3)
+        println(myNewMap["c"])
+
+        println("-------------- Operatorler --------------")
+
+        //Operator
+
+        var m = 5
+        println(m)
+        m = m + 1
+        println(m)
+        m++
+        println(m)
+        m--
+        println(m)
+
+        var n = 7
+        println(n > m)
+
+        println(n > m && 1 > 2 )
+        println(n > m || 1 > 2 )
+
+        println(10 + 2)
+        println(10 - 2)
+        println(10 * 2)
+        println(10 / 2)
+
+        println(10 % 4)
+
+        println("-------------- Contoroller IF-ELSE --------------")
+
+        val myNumberAge = 53
+        if (myNumberAge < 20) {
+            println("< 20")
+        } else  if (myNumberAge >=20 && myNumberAge <30){
+            println("30 - 40")
+        } else if(myNumberAge >=30 && myNumberAge <40) {
+            println("40 - 50")
+        } else {
+            println(">=50")
+        }
+
+
+
+
     }
 }
