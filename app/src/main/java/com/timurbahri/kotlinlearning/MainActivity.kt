@@ -209,8 +209,79 @@ class MainActivity : AppCompatActivity() {
             println(">=50")
         }
 
+        println("-------------- Contoroller Switch - When --------------")
+        //Switch - When
+
+        val day  = 3
+        var dayString = ""
+
+        /*if (day ==1) {
+            dayString  ="Monday"
+        }else if (day ==2) {
+            dayString ="Tuesday"
+        } else if (day ==3) {
+            dayString ="Wednesday"
+        }
+        println(dayString)
+
+         */
+
+
+        when(day) {
+            1 -> dayString ="Monday"
+            2 -> dayString ="Tuesday"
+            3 -> dayString ="Wedneday"
+            else -> dayString =""
+        }
+
+        println(dayString)
+
+        println("-------------- Döngüler - For Loop --------------")
+
+
+        val myArrayOfNumbers = arrayOf(12,15,18,21,24,27,30,33)
+        var q = myArrayOfNumbers[0] / 3 * 5
+        println(q)
+
+        for (number in myArrayOfNumbers) {
+            val z = number / 3 *5
+            println(z)
+        }
+
+        for (i in myArrayOfNumbers.indices ) {
+            val k = myArrayOfNumbers[i] / 3 * 5
+            println(k)
+        }
+
+        for (a in  0..9) {
+            println(a)
+        }
+
+        val myStringArrayList = ArrayList<String>()
+        myStringArrayList.add("Timur")
+        myStringArrayList.add("Bahri")
+        myStringArrayList.add("Nila")
+
+        for (str in myStringArrayList){
+            println(str)
+        }
+
+        myStringArrayList.forEach{ println(it)}
+
+
+
+        println("-------------- Döngüler - While Loop --------------")
+
+        var j = 0
+
+        while (j < 11){
+            println(j)
+            j = j +1
+        }
+
 
 
 
     }
+
 }
